@@ -43,7 +43,7 @@ public class Main {
                 try {
                     if (cart.getItems().size() == 0) throw new nullCartException();
                     if (orderList.getOrders().size() == 0) index = 1;
-                    else index = orderList.getOrders().size();
+                    else index = orderList.getOrders().size()+1;
                     orderList.add(new Order(index, in.split(" ")[1], in.split(" ")[2], cart));
                     cart = new cartDataSource();
                     Out.println("Order successfully added.");
